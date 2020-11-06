@@ -4,7 +4,7 @@
 ## Overview
 This is authors' re-implementation of the paper described in:  
 "[3D Shape Reconstruction from Free-Hand Sketches](https://arxiv.org/abs/2006.09694)"   
-[Jiayun Wang](http://pwang.pw/),&nbsp; Jierui Lin,&nbsp; [Rudrasis Chakraborty](https://rudra1988.github.io/),&nbsp; Runtao Liu,&nbsp; [Yubei Chen](https://redwood.berkeley.edu/people/yubei-chen/),&nbsp;  [Qian Yu](https://yuqian1023.github.io//)&nbsp; (UC Berkeley/ICSI)&nbsp; in arXiv.
+[Jiayun Wang](http://pwang.pw/),&nbsp; Jierui Lin,&nbsp; [Qian Yu](https://yuqian1023.github.io//)&nbsp; Runtao Liu,&nbsp; [Yubei Chen](https://redwood.berkeley.edu/people/yubei-chen/),&nbsp;   [Stella X. Yu](https://www1.icsi.berkeley.edu/~stellayu/)&nbsp; (UC Berkeley/ICSI/BUAA)&nbsp; in arXiv.
 
 Note that this repo is still under construction and will be ready soon.
 
