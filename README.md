@@ -12,19 +12,13 @@ This is authors' re-implementation of the paper described in:
 ## Overall architecture
 ```
 data
-  |--Data Folder (please update corresponding path in depthestimate//BatchFetcher.py)
-  |--ImageNet_LT
-    |--ImageNet_LT_open
-    |--ImageNet_LT_train.txt
-    |--ImageNet_LT_test.txt
-    |--ImageNet_LT_val.txt
-    |--ImageNet_LT_open.txt
-  |--Places_LT
-    |--Places_LT_open
-    |--Places_LT_train.txt
-    |--Places_LT_test.txt
-    |--Places_LT_val.txt
-    |--Places_LT_open.txt
+  |--Data Folder #please update corresponding path in depthestimate//BatchFetcher.py
+  |--depthestimate # 3D reconstruction module
+    |--BatchFetcher.py
+    |--train_nn_trans.py
+    |--visualizeptexample.v.py
+    |--...
+  |--sketchstd # sketch standarization module
 ```
 
 ## Training the network
