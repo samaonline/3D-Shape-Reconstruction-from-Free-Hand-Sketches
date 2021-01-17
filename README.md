@@ -10,6 +10,22 @@ This is authors' re-implementation of the paper described in:
 * [Tensorflow](https://www.tensorflow.org/) (version >= 1.12.0)
 
 ## Overall architecture
+```
+data
+  |--Data Folder (please update corresponding path in depthestimate//BatchFetcher.py)
+  |--ImageNet_LT
+    |--ImageNet_LT_open
+    |--ImageNet_LT_train.txt
+    |--ImageNet_LT_test.txt
+    |--ImageNet_LT_val.txt
+    |--ImageNet_LT_open.txt
+  |--Places_LT
+    |--Places_LT_open
+    |--Places_LT_train.txt
+    |--Places_LT_test.txt
+    |--Places_LT_val.txt
+    |--Places_LT_open.txt
+```
 
 ## Training the network
 
@@ -19,6 +35,8 @@ We use the [ShapeNet](https://www.shapenet.org/) dataset in our experiments, whi
 
 - ShapeNet rendering images: http://cvgl.stanford.edu/data2/ShapeNetRendering.tgz
 - ShapeNet voxelized models: http://cvgl.stanford.edu/data2/ShapeNetVox32.tgz (optional, for comparison with voxelized output only)
+
+Make sure you update the data path in the BatchFetcher.py.
 
 ### Generate synthetic sketches from rendered images
 We use a previous work [Unsupervised Sketch to Photo Synthesis](https://arxiv.org/abs/1909.08313) for generating synthetic sketches. Please refer to [their code](https://github.com/rt219/Unpaired-Sketch-to-Photo-Translation) to generate data for training.
@@ -32,9 +50,29 @@ Compiling CUDA code
 $ make
 ```
 
+Note you will need to edit makefile to match your nvcc, cudalib, and tensorflow path.
+
 ### Training the sketch standarization module
 
+We use [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) to train the sketch standarization module. Our code will be released soon.
+
 ### Training the reconstruction network
+```	
+$ python train_nn.py data=. dump=. train
+```
+
+
+### Predict with trained network
+```
+$ python train_nn.py data=. dump=. predict
+```
+
+### Visualualize dumpped prediction (press space to view the next one)
+```
+$ python python visualizeptexample.v.py <path>/train_nn.v.pkl
+example: $ python visualizeptexample.v.py dump/train_nn.v.pkl
+```
+	
 
 ## Note
 - The repo is adapted from [PointSetGeneration](https://github.com/fanhqme/PointSetGeneration).
