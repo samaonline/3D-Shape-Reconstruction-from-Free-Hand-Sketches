@@ -39,32 +39,35 @@ You can use [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) 
 
 ### Compiling CUDA code
 
-Compiling CUDA code
+You will need to first edit makefile to match your nvcc, cudalib, and tensorflow path.
+
+Then compile CUDA code
 ```
 $ make
 ```
 
-Note you will need to edit makefile to match your nvcc, cudalib, and tensorflow path.
 
 ### Training the sketch standarization module
 
 We use [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) to train the sketch standarization module. Our code will be released soon.
 
 ### Training the reconstruction network
+Update path to STANDARIZED sketch and point cloud dataset in depthestimate//BatchFetcher.py first.
+
 ```	
-$ python train_nn.py data=. dump=. train
+$ python depthestimate/train_nn_trans.py data=. dump=. train
 ```
 
 
 ### Predict with trained network
 ```
-$ python train_nn.py data=. dump=. predict
+$ python depthestimate/train_nn_trans.py data=. dump=. predict
 ```
 
 ### Visualualize dumpped prediction (press space to view the next one)
 ```
-$ python python visualizeptexample.v.py <path>/train_nn.v.pkl
-example: $ python visualizeptexample.v.py dump/train_nn.v.pkl
+$ python depthestimate/visualizeptexample.v.py <path>/train_nn.v.pkl
+example: $ python depthestimate/visualizeptexample.v.py dump/train_nn.v.pkl
 ```
 	
 
