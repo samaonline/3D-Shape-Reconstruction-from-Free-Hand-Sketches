@@ -49,7 +49,7 @@ $ make
 
 ### Training the sketch standarization module
 
-We use [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) to train the sketch standarization module. Our code will be released soon.
+We use [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) to train the sketch standarization module. Please refer to [sketchstd](sketchstd/). 
 
 ### Training the reconstruction network
 Update path to STANDARIZED sketch and point cloud dataset in depthestimate//BatchFetcher.py first.
